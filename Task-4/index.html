@@ -8,25 +8,33 @@
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-		<form action="">
-			<div>
-				<label for="username">
-					FullName
-				</label>
-				<input type="text" id="username">
-			</div>
-			<div>
-				<label for="age" style="padding-right: 35px">
-				Age
-				</label>
-				<input type="number" id="age" value="">
-			</div>
-			<button type="button" id="button" onclick = add()>
+	<form action="">
+		<div>
+			<label for="username" class="tag">
+				Your Full Name:
+			</label>
+			<label for="user-age" class="tag">
+				Your Age:
+			</label>		
+		</div>
+		<div style="width: 15vw">
+			<input type="text" id="username" placeholder="Enter your full name">
+			<input type="number" id="user-age" placeholder="Enter your age">
+			<center>
+				<button type="button" id="button" onclick=add()>
 					Add
-			</button>
-		</form>
+				</button>
+			</center>
+		</div>
+	</form>
 	<div id="block">
-
+		<div id="name" style="border-right: 1px solid black;">
+			<p>Full Name</p>
+		</div>
+		<div id="age">
+			<p>Age</p>
+		</div>
 	</div>
+	<hr>
 </body>
 </html>

@@ -6,9 +6,11 @@ function check(string){
 }
 function add(){
 	if (check(document.getElementById('username').value)){
-	 	document.getElementById('block').append('FullName: ' + document.getElementById('username').value,'  Age:',document.getElementById('age').value);
-	 	document.getElementById('block').innerHTML = document.getElementById('block').innerHTML + '<br></br>';
+	 	document.getElementById('name').append(document.getElementById('username').value);
+	 	document.getElementById('age').append(document.getElementById('user-age').value);
+	 	document.getElementById('name').innerHTML = document.getElementById('name').innerHTML + '<br></br>';
+	 	document.getElementById('age').innerHTML = document.getElementById('age').innerHTML + '<br></br>';
 	}else{
-		alert('Name doesn\'t include number');
+		alert('Oops!!Name doesn\'t include number.');
 	}
 }
