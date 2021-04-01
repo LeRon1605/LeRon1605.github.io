@@ -5,16 +5,11 @@ function check(string){
 	return true;
 }
 function add(){
-	if (document.getElementById('username').value !== ''){
-		if (check(document.getElementById('username').value) && Number(document.getElementById('user-age').value) > 0){
-	 		document.getElementById('name').append(document.getElementById('username').value);
-	 		document.getElementById('age').append(document.getElementById('user-age').value);
-	 		document.getElementById('name').innerHTML = document.getElementById('name').innerHTML + '<br></br>';
-	 		document.getElementById('age').innerHTML = document.getElementById('age').innerHTML + '<br></br>';
-		}else{
-			alert('Oops!!Something is wrong.');
-		}
-	}else{
-		alert('Please Enter Your Full Name!!');
-	}
+	if (check(document.getElementById('username').value) && Number(document.getElementById('user-age').value) > 0){
+	 	document.getElementById('name').append(document.getElementById('username').value);
+	 	document.getElementById('age').append(document.getElementById('user-age').value);
+	 	document.getElementById('name').innerHTML = document.getElementById('name').innerHTML + '<br></br>';
+	 	document.getElementById('age').innerHTML = document.getElementById('age').innerHTML + '<br></br>';
+	}else  $('#myModal').modal('show');
+	
 }
