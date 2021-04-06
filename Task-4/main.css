@@ -38,6 +38,7 @@ button {
 	margin-top: 10vw;
 	box-sizing: border-box;
 	display:flex;
+	justify-content: center;
 }
 #block div{
 	width: 50%;
