@@ -17,6 +17,7 @@ function test3(){
 	let inp = inpHTMLCollection[2].value;
 	outputHTMLCollection[2].value = 'True';
 	for (let i = 0;i < inp.length - 1;i++){
+		console.log((inp[i] < '0' || inp[i] > '9')|| (inp[i + 1] < '0' || inp[i + 1] > '9'));
 		if ((inp[i] < '0' || inp[i] > '9')|| (inp[i + 1] < '0' || inp[i + 1] > '9')){
 			alert('Invalid Input. Numbers only');
 			outputHTMLCollection[2].value = '';
@@ -27,6 +28,7 @@ function test3(){
 			break;
 		}
 	}
+
 }
 // Test 4
 function test4(){
