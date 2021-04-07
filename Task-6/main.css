@@ -20,7 +20,7 @@ html, body {
 }
 
 .container form {
-	width: 35vw;
+	width: 50vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -40,10 +40,13 @@ html, body {
 	border-radius: 10px;
 }
 .container .input{
-	width: 27.5vw;
+	max-width: 40vw;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+}
+.container .input * {
+	margin-left: 5px;
 }
 .container form label {
 	color: white;
