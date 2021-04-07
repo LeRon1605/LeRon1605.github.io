@@ -8,45 +8,18 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<form action="">
-		<div>
-			<label for="username" class="tag">
-				Your Full Name:
-			</label>	
-		</div>
-		<div style="width: 15vw">
-			<input type="text" id="username" placeholder="Enter your full name" value="">
-			<center>
-				 <button type="button" class="btn btn-primary" data-toggle="modal" onclick=add()>
-           			Add
-     			 </button>
-      			<div class="modal" id="myModal">
-        			<div class="modal-dialog">
-           				<div class="modal-content">      
-               				<div class="modal-header">
-                  				<h4 class="modal-title">Warning</h4>
-                  				<button type="button" class="close" data-dismiss="modal">&times;</button>
-               				</div>       
-               				<div class="modal-body">
-                  				Invalid Input
-               				</div> 
-               				<div class="modal-footer">
-                  				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-               				</div>
-            			</div>
-         			</div>
-      			</div>	
-      			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-			</center>
-		</div>
+	<form>
+		<p>Form</p>
+		<label for="username">Name:</label>
+		<input type="text" id="username" placeholder="Enter your name">
+		<button type="submit" onclick="">
+			Add
+		</button>
 	</form>
-	<div id="block">
-		<center>
-			<p>List</p>
-		</center>
-		<ul class="list">
+	<div class="list">
+		<p>List</p>
+		<ul>
+			
 		</ul>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
