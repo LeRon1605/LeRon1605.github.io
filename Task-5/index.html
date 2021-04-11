@@ -7,22 +7,24 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=PT+Serif&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
-	<style>
-		
-	</style>
 </head>
 <body>
 	<div class="nav-bar">
 		<div class="searching-tool">
+			<!--  
 			<i class="fas fa-arrow-left icon" id="appear-icon"></i>
+			-->
 			<i class="fab fa-facebook icon" id="fb-icon"></i>
-			<input type="text" placeholder="&#xf002; Tìm kiếm trên facebook" id="searching" onclick=appearIcon()>
+			<input type="text" placeholder="&#xf002; Tìm kiếm trên facebook" id="searching">
 		</div>
 		<div class="middle-icon">
-			<i class="fas fa-home icon" ></i>
+			<i class="fas fa-home icon" style="position: relative;">
+				<span class="notification">9+</span></i>
+			</i>
 			<i class="fas fa-user-friends icon" ></i>
 			<i class="fas fa-tv icon"></i>
-			<i class="fas fa-store icon"></i>
+			<i class="fas fa-store icon" style="position: relative;">
+				<span class="notification">9+</span></i>
 			<i class="fas fa-users icon"></i>
 		</div>
 		<div class="right-icon">
@@ -57,7 +59,6 @@
 		</div>
 		<div class="option">
 			<p class="text">Lê Rôn</p>
-			<br>
 			<a href="" class="change">Chỉnh sửa</a>
 			<div class="bar">
 				<div class="left">
@@ -87,13 +88,9 @@
 	<div class="message-block">
 		<div class="message-icon">
 			<i class="fas fa-comment-alt icon"></i>
-			<div class="icon-message" onclick=apppearMessage()>
+			<div class="icon-message" id="avatar-icon" onclick=apppearMessage()>
 				<img src="https://scontent.fdad7-1.fna.fbcdn.net/v/t1.6435-9/166823339_1340324363013485_7795114066025258755_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=TRnTFq4G0JwAX-vzoGl&_nc_ht=scontent.fdad7-1.fna&oh=3167eae17a64eb164a6e2c6eeb0d7eb4&oe=6094AC81" alt="">
 				<i class="fas fa-times-circle close-message" onclick=CloseMessage()></i>
-			</div>
-			<div class="icon-message" onclick=apppearMessage()>
-				<img src="https://scontent.fdad7-1.fna.fbcdn.net/v/t1.6435-9/131008887_2872305843046492_74207180442776220_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=EWkW0HHDh_kAX_-0y4q&_nc_ht=scontent.fdad7-1.fna&oh=db330e1114094c5ab13396895010d09a&oe=6093E117" alt="">
-				<i class="fas fa-times-circle close-message" onclick=closeMessage()></i>
 			</div>
 		</div>
 		<div class="message-appear">

@@ -2,16 +2,14 @@ let count = -1;
 function apppearMessage(){
 	count++;
 	let messageBlock = document.getElementsByClassName('message-appear');
-	messageBlock[0].innerHTML += '<div class="message"> <i class="fas fa-times-circle"  onclick=closeMessage()></i> </div>';
+	messageBlock[0].innerHTML += '<div class="message"> <div class="block"><i class="fas fa-times-circle"  onclick=removeMessage()></i> <i class="fas fa-minus" onclick=closeMessage()></i><i class="fas fa-phone"></i><i class="fas fa-video"></i></div></div>';
 }
 function closeMessage(){
 	let messageBlock = document.getElementsByClassName('message');
-	messageBlock[count].style.display = 'none';
+	messageBlock[0].style.display = 'none';
 }
-function appearIcon(){
-	let searchingInput = document.getElementById('searching');
-	let facebookIcon = document.getElementById('fb-icon');
-	let backIcon = document.getElementById('appearIcon');
-	facebookIcon.style.display = 'none';
-	backIcon.style.display = 'inline-block'
+function removeMessage(){
+	let messageBlock = document.getElementsByClassName('message');
+	messageBlock[0].parentNode.removeChild(messageBlock[0]);
+	document.getElementById('avatar-icon').parentNode.removeChild(document.getElementById('avatar-icon'));
 }
