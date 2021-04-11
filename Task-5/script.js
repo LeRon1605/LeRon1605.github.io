@@ -13,3 +13,6 @@ function removeMessage(){
 	messageBlock[0].parentNode.removeChild(messageBlock[0]);
 	document.getElementById('avatar-icon').parentNode.removeChild(document.getElementById('avatar-icon'));
 }
+function closeAvatar(){
+	document.getElementById('avatar-icon').parentNode.removeChild(document.getElementById('avatar-icon'));
+}
