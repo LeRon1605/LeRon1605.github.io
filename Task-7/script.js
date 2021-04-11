@@ -51,5 +51,111 @@ function test5(){
 	if (inp.length < 3 || inp.length % 2 === 0) alert('Invalid Input');
 		else outputHTMLCollection[4].value = inp.slice(Math.floor(inp.length/2) - 1,Math.floor((inp.length/2) + 2));
 }
+// Test 6
+function test6(){
+	let inp = inpHTMLCollection[5].value;
+	let arr, result = [];
+	let count = 1,value;
+	if (inp === '') alert('Invalid Input');
+	if (inp[0] === '[' && inp[inp.length - 1] == ']') arr = inp.slice(1,inp.length - 1).split(',');
+		else arr = inp.split(',');
+	for (let i = 0;i < arr.length;i++) arr[i] = Number(arr[i].trim());
+	if (arr.length == 1) outputHTMLCollection[5].value = `Value ${arr[0]}: 1 lần`;
+	arr.sort();
+	for (let i = 0;i < arr.length;i++) {
+		let check = 1;
+		while (arr[i] === arr[i + 1]){
+			check++;
+			i++;
+		}
+		if (check === count){
+			result.push(arr[i]);
+		}else if(check > count){
+			count = check;
+			while (result.length > 0){
+				result.pop();
+			}
+			result.push(arr[i]);
+		}	
+	}
+	outputHTMLCollection[5].value = `Value {${result}}: ${count} lần`;
+}
+// Test 7
+function test7(){
+	let inp = inpHTMLCollection[6].value;
+	if (inp.toLowerCase().indexOf('java') !== -1) outputHTMLCollection[6].value = 'True';
+		else outputHTMLCollection[6].value = 'false';
+}
+// Test 8
+function test8(){
+	let inp = Number(inpHTMLCollection[7].value);
+	let result = 'Tháng ';
+	switch (inp){
+		case 1:
+			result += 'Một';
+			break;
+		case 2:
+			result += 'Hai';
+			break;
+		case 3:
+			result += 'Ba';
+			break;
+		case 4:
+			result += 'Tư';
+			break;
+		case 5:
+			result += 'Năm';
+			break;
+		case 6:
+			result += 'Sáu';
+			break;
+		case 7:
+			result += 'Bảy';
+			break;
+		case 8:
+			result += 'Tám';
+			break;
+		case 9:
+			result += 'Chín';
+			break;
+		case 10:
+			result += 'Mười';
+			break;
+		case 11:
+			result += 'Mười một';
+			break;
+		case 12:
+			result += 'Mười hai';
+			break;
+	}
+	outputHTMLCollection[7].value = result;
+}
+// Test 9
+function test9(){
+	let inp = inpHTMLCollection[8].value;
+	let words = inp.split(' ');
+	let maxLength = 0;
+	for (word of words){
+		if (word.length > maxLength){
+			maxLength = word.length;
+			outputHTMLCollection[8].value = word;
+		}
+	}
+}
+// Test 10
+function checkSNT(n){
+	for (let i = 2;i <= Math.sqrt(n);i++){
+		if (n % i == 0) return false;
+	}
+	return true;
+}
+function test10(){
+	let a = Number(document.getElementById('a-test10').value);
+	let b = Number(document.getElementById('b-test10').value);
+	outputHTMLCollection[9].value = '';
+	for (let i = a;i <= b;i++){
+		if (checkSNT(i)) outputHTMLCollection[9].value += i.toString() + ' ';
+	}
+}
 test1();
 test2();
