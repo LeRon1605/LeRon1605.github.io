@@ -61,7 +61,6 @@ html ,body {
 	color: #f48847;
 }
 .assignment button:hover span {
-	
 	display: none;
 }
 .answer {
@@ -89,7 +88,7 @@ html ,body {
 .assignment form {
 	width: 100%;
 	position: absolute;
-	bottom: -23%;
+	bottom: -20%;
 	display: flex;
 	justify-content: center;
 	align-items: center;

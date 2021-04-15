@@ -144,6 +144,7 @@ function test9(){
 }
 // Test 10
 function checkSNT(n){
+	if (n < 2) return false;
 	for (let i = 2;i <= Math.sqrt(n);i++){
 		if (n % i == 0) return false;
 	}
