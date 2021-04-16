@@ -1,4 +1,23 @@
 let count = -1;
+function activeIcon(event){
+	event.style.color = '#2D88FF';
+	event.style.borderBottom = '3px solid #2D88FF';
+	event.style.borderRadius = '0px';
+	let midIcon = document.getElementsByClassName('mid-icon');
+	for (let i = 0;i < midIcon.length;i++){
+		if (midIcon[i] != event){
+			midIcon[i].style.color = '#8A8D91';
+			midIcon[i].style.borderBottom = 'none';
+			midIcon[i].style.borderRadius = '5px';
+		}
+	}
+}
+function activeA(event){
+	event.style.color = '#2D88FF';
+	event.style.borderBottom = '3px solid #2D88FF';
+	event.style.borderRadius = '0px';
+	let a = document.querySelectorAll('.option .left a');
+}
 function apppearMessage(){
 	count++;
 	let messageBlock = document.getElementsByClassName('message-appear');

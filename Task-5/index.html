@@ -5,27 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Facebook Profile</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=PT+Serif&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<div class="nav-bar">
 		<div class="searching-tool">
-			<!--  
 			<i class="fas fa-arrow-left icon" id="appear-icon"></i>
-			-->
-			<i class="fab fa-facebook icon" id="fb-icon"></i>
+			<img src="https://play-lh.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s180-rw" alt="">
 			<input type="text" placeholder="&#xf002; Tìm kiếm trên facebook" id="searching">
 		</div>
 		<div class="middle-icon">
-			<i class="fas fa-home icon" style="position: relative;">
+			<i class="fas fa-home icon mid-icon" style="position: relative;color:#2D88FF;border-bottom: 3px solid #2D88FF;border-radius: 0px" onclick=activeIcon(this)>
 				<span class="notification">9+</span></i>
 			</i>
-			<i class="fas fa-user-friends icon" ></i>
-			<i class="fas fa-tv icon"></i>
-			<i class="fas fa-store icon" style="position: relative;">
+			<i class="fas fa-user-friends icon mid-icon" onclick=activeIcon(this)></i>
+			<i class="fas fa-tv icon mid-icon" onclick=activeIcon(this)></i>
+			<i class="fas fa-store icon mid-icon" style="position: relative;" onclick=activeIcon(this)>
 				<span class="notification">9+</span></i>
-			<i class="fas fa-users icon"></i>
+			<i class="fas fa-users icon mid-icon" onclick=activeIcon(this)></i>
 		</div>
 		<div class="right-icon">
 			<p class="my-inf">
@@ -62,23 +60,23 @@
 			<a href="" class="change">Chỉnh sửa</a>
 			<div class="bar">
 				<div class="left">
-					<a href="">Bài viết</a>
-					<a href="">Giới thiệu</a>
-					<a href="">Bạn bè</a>
-					<a href="">Ảnh</a>
-					<a href="">Xem thêm
+					<a href="" style="color:#2D88FF;border-bottom:3px solid #2D88FF;border-radius:0px">Bài viết</a>
+					<a href="" onclick=activeA(this)>Giới thiệu</a>
+					<a href="" onclick=activeA(this)>Bạn bè</a>
+					<a href="" onclick=activeA(this)>Ảnh</a>
+					<a href="" onclick=activeA(this)>Xem thêm
 						<i class="fas fa-caret-down"></i>
 					</a>
 				</div>
 				<div class="right">
-					<a href="">Chỉnh sửa trang cá nhân</a>
-					<a href="">
+					<a href="" onclick=activeA(this)>Chỉnh sửa trang cá nhân</a>
+					<a href="" onclick=activeA(this)>
 						<i class="fas fa-eye"></i>
 					</a>
-					<a href="">
+					<a href="" onclick=activeA(this)>
 						<i class="fas fa-search"></i>
 					</a>
-					<a href="">
+					<a href="" onclick=activeA(this)>
 						<i class="fas fa-ellipsis-h"></i>
 					</a>
 				</div>
