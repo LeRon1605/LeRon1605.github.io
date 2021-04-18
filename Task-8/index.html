@@ -10,23 +10,24 @@
   <body>
     <form action="" id="form">
       <div>
-        <p>Form</p>
+        <p id="form-name">Form</p>
         <label>Item Name</label>
         <br>
         <label for="category">Category</label>
       </div>
       <div>
-        <input type="text" id="itemname" placeholder="Enter Item name" value="" required="">
+        <input type="text" id="itemname" placeholder="Enter Item name" value="">
+        <p id="notification"></p>
         <br>
-        <select required="">
+        <select>
           <option value="">No selected</option>
           <option value="Category 1">Category 1</option>
           <option value="Category 2">Category 2</option>
           <option value="Category 3">Category 3</option>
         </select>
         <br>
-        <input type="file" name="" accept=" image/*" style="padding-left: 0;color: white" onchange=preview_image() id="input-img" required="">
-        <img src="" alt="">
+        <input type="file" name="" accept=" image/*" style="padding-left: 0;color: white" onchange=preview_image() id="input-img" value="">
+        <img src="" alt="" id="img">
         <br>
         <button type="submit" class="btn btn-primary">Submit Form</button>
       </div>
@@ -43,6 +44,7 @@
           </tr>
         </thead>
         <tbody>
+
         </tbody>
       </table>
     </div>
