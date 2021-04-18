@@ -10,14 +10,16 @@ function changeColorNavBar(event){
 	}
 }
 window.onload = function (){
-	let myImg = document.getElementById('my-image');
+	let myImg = document.getElementById('carouselExampleFade');
 	let img1 = document.getElementById('intro-image1');
 	let img2 = document.getElementById('intro-image2');
 	let img3 = document.getElementById('intro-image3');
+	let img4 = document.getElementById('intro-image4');
 	myImg.style.transform = 'scale(1)';
 	img1.style.transform = 'scale(1)';
 	img2.style.transform = 'scale(1)';
 	img3.style.transform = 'scale(1)';
+	img4.style.transform = 'scale(1)';
 	let i = 0;
 	let text = 'Hello, My name is Rôn.<br>Welcome you to my Website.';
 	let brTagIndex = text.indexOf('<br>');
@@ -31,7 +33,8 @@ window.onload = function (){
 				codeIntroduce.innerHTML += text[i];
 				i++;
 			}
-			setTimeout(typeWriter, 200);
+			setTimeout(typeWriter, 50);
+
 		}
 	}
 	typeWriter();
