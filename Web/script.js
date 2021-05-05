@@ -74,3 +74,23 @@ function loadNumber(){
 	}
 }
 window.addEventListener('scroll',loadNumber);
+let expButtons = document.querySelectorAll('#my-exp button');
+for (expB of expButtons){
+	expB.addEventListener('click',(event) => {
+		let expBoards = document.querySelectorAll('.exp-board > div');
+		for (button of expButtons) button.classList.toggle('button-clicked');
+		for (expBoard of expBoards) {
+			expBoard.style.transform = 'scale(0)';
+		}
+		setTimeout(() => {
+			for (expBoard of expBoards) expBoard.style.transform = 'scale(1)';
+		},500)
+	})
+}
+function loadIconStick(){
+	let icons = document.querySelectorAll('#fixed-icon a');
+	for (let i = 0;i < icons.length;i++){
+		icons[i].style.transform = 'scale(1)';
+	}
+}
+window.addEventListener('load',loadIconStick)

@@ -254,3 +254,148 @@ html{
 #been-through div p {
 	margin-top: 1vh;
 }
+#my-exp {
+	background: #FFF1F1;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	padding: 5vw;
+}
+#my-exp .title {
+	font-size: 2.5vw;
+	font-weight: 9vw;
+	color: #FF324D;
+	font-family: 'PT Serif', serif;
+}
+#my-exp .text {
+	font-size: 1.5vw;
+	margin-top: 3vh;
+	color: #8B92A4;
+}
+#my-exp .date {
+	font-size: 1.3vw;
+	margin-top: 1vh;
+	border-bottom: 1px solid #8B92A4;
+	padding-bottom: 2vh;
+	font-family: 'PT Serif', serif;
+}
+#my-exp .date span {
+	color: #FF324D
+}
+#my-exp #button-exp{
+	background-color: white;
+	padding: 1vh;
+	border-radius: 50px;
+	margin-top: 5vh;
+}
+#my-exp button {
+	padding: 1vw;
+	font-size: 1.5vw;
+	background-color: white;
+	border: none;
+	border-radius: 50px;
+	transition: 1s;
+	cursor: pointer;
+}
+
+.button-clicked {
+	color: white;
+	background-color: #FF324D !important;
+}
+#my-exp > div:last-child {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5vh;
+}
+.exp-clicked {
+	animation: zoomSmallUp 0.5s infinitate;
+}
+@keyframes zoomSmallUp{
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.exp-board > div {
+	width: 30vw;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin: 1vh;
+	padding: 2vw;
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: 0px 0px 4px #808080;
+	background-color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+#contact {
+	width: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#contact #block {
+	display: flex;
+}
+#contact #block #container{
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+}
+#contact #block .inf {
+	display: flex;
+	align-items: center;
+	font-size: 1.5vw; 
+	margin: 1vh;
+}
+#contact #block .inf p{
+	margin: 1vh;
+}
+#contact #block .inf i {
+	font-size: 1vw;
+	background-color: #FF324D;
+	padding: 1vw;
+	border-radius: 100%;
+}
+#contact #block input {
+	font-size: 1.5vw;
+	padding: 2vh 3vw;
+	padding-left: 1vw;
+}
+#contact #block button {
+	font-size: 1.7vw;
+	color: white;
+	background-color: #FF324D;
+	border: none;
+	padding: 2vh 2vw;
+}
+#fixed-icon {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 2vw;
+	bottom: 5vh;
+}
+#fixed-icon a {
+	background-color: #FF324D;
+	border-radius: 500px;
+	margin-top: 1vh;
+	padding: 0.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	transform: scale(0);
+	transition: 1s;
+}
+#fixed-icon i{
+	color: white;
+	font-size: 2vw;
+}
