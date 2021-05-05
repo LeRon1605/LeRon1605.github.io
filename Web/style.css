@@ -113,13 +113,12 @@ html{
 	width: 80vw;
 	height: 80vh;
 	background-color: white;
-	border: 3px solid black;
 	position: absolute;
 	top: -5vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	box-shadow: 0px 0px 5px #808080;
+	box-shadow: 0px 0px 3px black;
 	border: 1px solid #ACAFB3;
 	border-radius: 5px;
 	font-family: 'Rubik', sans-serif;
@@ -127,7 +126,7 @@ html{
 .about-me .detail img {
 	width: 35vw;
 	height: 35vw;
-	margin: 5vh;
+	margin: 0vh;
 	object-fit: cover;
 	opacity: 0;
 	transition: 1s;
@@ -143,11 +142,11 @@ html{
 	opacity: 0;
 	transition: 1s;
 	transform: translateY(5vw);
-	margin-top: 2vh;
 	font-family: 'PT Serif', serif;
+	margin-top: 1vh;
 }
 .about-me .detail .my-inf * {
-	margin-top: 3vh;
+	margin-top: 2vh;
 }
 .about-me .detail .my-inf #skills {
 	display: flex;
@@ -161,7 +160,7 @@ html{
 	width: 15vw;
 	display: flex;
 	justify-content: space-between;
-	font-weight: 9vw;
+	font-weight: 10vw;
 }
 .about-me .detail .my-inf #skills .skill .percent-skill {
 	width: 15vw;
@@ -184,11 +183,13 @@ html{
 }
 #services {
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 	background-color: white;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	top: -5vh;
 }
 #services * {
 	text-align: center;
@@ -236,4 +237,20 @@ html{
 }
 #services div:last-child .row div:hover {
 	animation: example 0.5s linear;
+}
+#been-through {
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+#been-through div {
+	font-size: 2vw;
+	padding: 5vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'PT Serif', serif;
+}
+#been-through div p {
+	margin-top: 1vh;
 }

@@ -56,3 +56,21 @@ function loadPercentSkill(){
 	}
 }
 window.addEventListener('scroll',loadPercentSkill);
+function loadNumber(){
+	let tag = document.querySelector('#been-through');
+	if (window.scrollY > tag.getBoundingClientRect().top+window.scrollY - 600) {
+		let pTag = document.querySelectorAll('#been-through div p:last-child');
+		let numTag = document.querySelectorAll('#been-through div p:last-child');
+		let i = 0;
+		function upPercent(){
+			if (i <= 300){
+				for (tag of numTag) tag.innerText = `${i}+`;
+				setTimeout(upPercent,1);
+				i++
+			}
+		}
+		upPercent(300);
+		window.removeEventListener('scroll',loadNumber);
+	}
+}
+window.addEventListener('scroll',loadNumber);
