@@ -33,7 +33,7 @@ function typeWriter() {
 window.addEventListener('load',typeWriter())
 function loadPercentSkill(){
 	let detail = document.querySelector('.about-me .detail');
-	if (window.scrollY > detail.getBoundingClientRect().top+window.scrollY - 530) {
+	if (window.scrollY > detail.getBoundingClientRect().top+window.scrollY - 700) {
 
 		let allSkills = document.querySelectorAll('.about-me .detail .my-inf #skills .skill .percent-skill div');
 		let allPercent = document.querySelectorAll('.about-me .detail .my-inf #skills .skill .each-skill p:last-child');
@@ -58,7 +58,7 @@ function loadPercentSkill(){
 window.addEventListener('scroll',loadPercentSkill);
 function loadNumber(){
 	let tag = document.querySelector('#been-through');
-	if (window.scrollY > tag.getBoundingClientRect().top+window.scrollY - 600) {
+	if (window.scrollY > tag.getBoundingClientRect().top+window.scrollY - 650) {
 		let pTag = document.querySelectorAll('#been-through div p:last-child');
 		let numTag = document.querySelectorAll('#been-through div p:last-child');
 		let i = 0;
