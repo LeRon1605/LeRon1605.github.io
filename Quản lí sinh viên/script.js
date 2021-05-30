@@ -1,4 +1,4 @@
-let block, numberOfStudent = 2;
+let block, numberOfStudent = (localStorage.getItem('student') === null) ? 0 : (JSON.parse(localStorage.getItem('student'))).length;
 function validName(){
 	let inputName = document.getElementById('username').value;
 	if (inputName.trim() == '' || !inputName.split(' ').every(function(element){return ((element >= 'a' && element <= 'z') || (element >= 'A' && element <= 'Z') || element == ' ');}) || inputName.length < 10) return false;
@@ -110,6 +110,16 @@ function getData(){
 	      	</td>
 	    </tr>
 	`
+	let newStudent = {
+		name: inputName,
+		age: inputAge,
+		gender: inputGender,
+		id: inputID,
+		class: inputClass,
+		image: block,
+	}
+	if (localStorage.getItem('student') == null) localStorage.setItem('student',JSON.stringify([]));
+	localStorage.setItem('student',JSON.stringify(JSON.parse(localStorage.getItem('student')).concat([newStudent])));
 	document.querySelector('.table-list tbody').innerHTML += newRow;
 	numberOfStudent += 1;
 	document.getElementById('username').value = '';
@@ -144,11 +154,16 @@ function deleteSV(event){
 	let condition = false;
 	let node = event.parentElement.parentElement;
 	let pTag = document.querySelectorAll('table p');
-	console.log(pTag)
 	for (let i = 0;i < pTag.length;i++){
 		if (condition) pTag[i].innerText = Number(pTag[i].innerText) - 1;
 		if (pTag[i].parentElement.parentElement == node) condition = true;
 	}
+	let studentName = node.querySelector('input[name = "name"]').value;
+	let students = JSON.parse(localStorage.getItem('student'));
+	students.splice((students.indexOf(students.find((element, index) => {
+		return element.name == studentName;
+	}))), 1)
+	localStorage.setItem('student', JSON.stringify(students));
 	event.parentElement.parentElement.remove();
 	numberOfStudent -= 1;
 }
@@ -209,4 +224,41 @@ function findSV(){
 	}
 	alert("Không tồn tại sinh viên");
 }
-window.onload = toolActive;
+window.addEventListener('load', toolActive);
+window.addEventListener('load', function(){
+	let students = (localStorage.getItem('student') === null) ? [] : JSON.parse(localStorage.getItem('student'));
+	for (let i = 0;i < students.length;i++){
+		let student = students[i];
+		let newRow = `
+			<tr>	
+		      	<th scope="row">
+		      		<p>${i + 1}</p>
+		  		</th>
+		      	<td>
+		      		<input type="text" name="name" value="${student.name}" readonly="true">
+		      	</td>
+		      	<td>
+		     	 	<input type="text" name="age" value="${student.age}" readonly="true">
+		  		</td>
+		      	<td>
+		      		<input type="text" name="gender" value="${student.gender}" readonly="true">
+		      	</td>
+		      	<td>
+		      		<input type="text" name="id" value="${student.id}" readonly="true">
+		      	</td>
+		      	<td>
+		      		<input type="text" name="class" value="${student.class}" readonly="true">
+		      	</td>
+		      	<td>
+		      		<img src="${student.image}" alt="">
+		      	</td>
+		      	<td>
+		      		<button type="button" class="btn btn-success" onclick=editSV(this)>Edit</button>
+		      		<button type="button" class="btn btn-danger" onclick=deleteSV(this)>Delete</button>
+		      	</td>
+		    </tr>
+		`;
+		document.querySelector('.table-list tbody').innerHTML += newRow;
+	}
+	
+})
